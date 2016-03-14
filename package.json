@@ -1,0 +1,25 @@
+{
+  "name": "es6-boilerplate",
+  "version": "0.0.1",
+  "description": "Boilerplate ES6 with a lot of examples!",
+  "main": "source/main.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jimilucio/es6-bootcamp.git"
+  },
+  "keywords": [
+    "ES6",
+    "boilerplate",
+    "bootcamp",
+    "sass"
+  ],
+  "author": "Luciano Murruni",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jimilucio/es6-bootcamp/issues"
+  },
+  "homepage": "https://github.com/jimilucio/es6-bootcamp#readme"
+}
