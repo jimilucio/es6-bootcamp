@@ -13,6 +13,16 @@ describe('TextAnalyzer', () => {
     expect(analyzer.getText()).toBe('World');
   });
 
+  it('should return a text having newline', () => {
+    const text =
+      `This
+      is a
+      newline
+      text`;
+    analyzer.setText(text);
+    expect(analyzer.getText()).toBe(text);
+  });
+
   it('words should return the words', () => {
     const text = 'I hope the words will be the same';
     const myWords = ['i', 'hope', 'the', 'words', 'will', 'be', 'the', 'same'];

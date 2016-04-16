@@ -4,6 +4,7 @@
   "description": "Boilerplate ES6 with a lot of examples!",
   "main": "source/main.js",
   "dependencies": {
+    "isomorphic-fetch": "^2.2.1",
     "material-design-lite": "^1.1.3",
     "rx": "^4.1.0"
   },
@@ -39,7 +40,7 @@
     "build": "webpack",
     "watch": "webpack --watch",
     "start": "webpack-dev-server --hot --inline --progress --colors --module-bind",
-    "test": "karma start 'config/karma.config.js'"
+    "test": "karma start 'karma.config.js'"
   },
   "babel": {
     "presets": [

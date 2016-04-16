@@ -59,7 +59,7 @@ class TextAnalyzer {
   * @return {array[string]} Words array.
   */
   words() {
-    return this.text.split(' ')
+    return this.text.split(/[ \n\t]+/)
       .map(word => word.trim())
       .map(word => word.toLowerCase());
   }
