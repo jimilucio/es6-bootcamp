@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="icon" href="../../favicon.ico">
+    <title>ES6 Bootcamp</title>
+  </head>
+
+  <body>
+
+    <!-- Always shows a header, even in smaller screens. -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <!-- Title -->
+          <span class="mdl-layout-title">ES6 - Bootcamp</span>
+          <!-- Add spacer, to align navigation to the right -->
+          <div class="mdl-layout-spacer"></div>
+          <!-- Navigation. We hide it in small screens. -->
+          <nav class="mdl-navigation mdl-layout--large-screen-only">
+            <!-- Flat button with ripple -->
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent"
+              data-link="#questionario">
+              Questionario <i class="material-icons">trending_up</i>
+            </button>
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent"
+              data-link="https://github.com/jimilucio/">
+              GitHub <i class="material-icons">code</i>
+            </button>
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent"
+              data-link="https://twitter.com/jimilucio/">
+              Twitter <i class="material-icons">message</i>
+            </button>
+          </nav>
+        </div>
+      </header>
+      <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">ES6 - Bootcamp</span>
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="" target="_blank"><i class="material-icons">trending_up</i> Questionario</a>
+            <a class="mdl-navigation__link" href="https://github.com/jimilucio/" target="_blank"><i class="material-icons">code</i> GitHub</a>
+            <a class="mdl-navigation__link" href="https://twitter.com/jimilucio" target="_blank"><i class="material-icons">message</i> Twitter</a>
+        </nav>
+      </div>
+      <main class="mdl-layout__content">
+        <div class="page-content">
+
+
+            <!-- Your content goes here -->
+            <div class="mdl-grid">
+              <div class="mdl-cell mdl-cell--8-col mdl-cell--10-col-tablet" id="workspace">
+                <div class="mdl-textfield mdl-js-textfield">
+                  <textarea id="application-text" class="mdl-textfield__input" type="text" rows= "15"></textarea>
+                  <label class="mdl-textfield__label" for="sample5">Type some text to analyze!</label>
+                </div>
+              </div>
+              <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet" id="info">
+                <ul class="demo-list-item mdl-list">
+                  <li class="mdl-list__item">
+                    <span class="mdl-list__item-primary-content">
+                      Text Length: <span id="text-length"></span>
+                    </span>
+                  </li>
+                  <li class="mdl-list__item">
+                    <span class="mdl-list__item-primary-content">
+                      Text Length (no spaces): <span id="text-length-nospaces"></span>
+                    </span>
+                  </li>
+                  <li class="mdl-list__item">
+                    <span class="mdl-list__item-primary-content">
+                      Singular words: <span id="singular-words"></span>
+                    </span>
+                  </li>
+                  <li class="mdl-list__item">
+                    <span class="mdl-list__item-primary-content">
+                      Singular characters: <span id="singular-chars"></span>
+                    </span>
+                  </li>
+                  <li class="mdl-list__item">
+                    <span class="mdl-list__item-primary-content">
+                      Average word length: <span id="average-word-length"></span>
+                    </span>
+                  </li>
+                  <li class="mdl-list__item">
+                    <span class="mdl-list__item-primary-content">
+                      Sentences: <span id="sentences-count"></span></li>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+
+            <ul class="demo-list-item mdl-list">
+                  <li class="mdl-list__item">Most used words: <span id="most-used-words"></span></li>
+            </ul>
+
+        </div>
+      </main>
+    </div>
+    <script src="bundle.js"></script>
+  </body>
+</html>
