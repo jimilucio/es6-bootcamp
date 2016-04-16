@@ -51,10 +51,34 @@
 
             <!-- Your content goes here -->
             <div class="mdl-grid">
+              <div class="mdl-cell--2-col">
+                <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
+                  <input type="radio" id="option-1" class="mdl-radio__button" name="options" value="1" checked>
+                  <span class="mdl-radio__label">Ita-Eng</span>
+                </label>
+              </div>
+              <div class="mdl-cell--2-col">
+                <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
+                  <input type="radio" id="option-2" class="mdl-radio__button" name="options" value="2">
+                  <span class="mdl-radio__label">Eng-Ita</span>
+                </label>
+              </div>
+              <div class="mdl-cell--2-col">
+                <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-3">
+                  <input type="radio" id="option-3" class="mdl-radio__button" name="options" value="3">
+                  <span class="mdl-radio__label">No-translate</span>
+                </label>
+              </div>
+            </div>
+            <div class="mdl-grid">
               <div class="mdl-cell mdl-cell--8-col mdl-cell--10-col-tablet" id="workspace">
                 <div class="mdl-textfield mdl-js-textfield">
-                  <textarea id="application-text" class="mdl-textfield__input" type="text" rows= "15"></textarea>
-                  <label class="mdl-textfield__label" for="sample5">Type some text to analyze!</label>
+                  <textarea id="application-text" class="mdl-textfield__input" type="text" rows= "10"></textarea>
+                  <label class="mdl-textfield__label" for="application-text">Type some text to analyze!</label>
+                </div>
+                <div class="mdl-textfield mdl-js-textfield">
+                  <textarea id="application-text-translated" class="mdl-textfield__input" type="text" rows= "10" disabled></textarea>
+                  <label class="mdl-textfield__label" for="application-text-translated">Translated text</label>
                 </div>
               </div>
               <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet" id="info">
@@ -86,21 +110,38 @@
                   </li>
                   <li class="mdl-list__item">
                     <span class="mdl-list__item-primary-content">
-                      Sentences: <span id="sentences-count"></span></li>
+                      Sentences: <span id="sentences-count"></span>
+                    </span>
+                  </li>
+                  <li class="mdl-list__item">
+                    <span class="mdl-list__item-primary-content">
+                      Most used words: <span id="most-used-words"></span>
                     </span>
                   </li>
                 </ul>
               </div>
             </div>
-
-
-            <ul class="demo-list-item mdl-list">
-                  <li class="mdl-list__item">Most used words: <span id="most-used-words"></span></li>
-            </ul>
-
         </div>
       </main>
+      <footer class="mdl-mini-footer">
+        <div class="mdl-mini-footer__left-section">
+          <div class="mdl-logo">ES6 - TextAnalyzer</div>
+          <ul class="mdl-mini-footer__link-list">
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+          </ul>
+        </div>
+        <div class="mdl-mini-footer__right-section">
+          <div class="mdl-logo">Powered by</div>
+          <ul class="mdl-mini-footer__link-list">
+            <li><a href="#">@jimilucio</a></li>
+            <li><a href="#">@illbexyz</a></li>
+          </ul>
+        </div>
+      </footer>
     </div>
+
+
     <script src="bundle.js"></script>
   </body>
 </html>
