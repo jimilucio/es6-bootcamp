@@ -18,24 +18,50 @@ module.exports = {
   },
   module: {
     loaders: [
-            {
-              loader: 'babel-loader',
-              test: _appSource,
-            }
-        ]
+      {
+        test: _appSource,
+        loader: 'babel-loader'
+      },
+      {
+        test: /\.scss$/,
+        loaders: ['style', 'css', 'sass']
+      },
+      {
+        test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'url?limit=10000&mimetype=application/font-woff'
+      },
+      {
+        test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'url?limit=10000&mimetype=application/octet-stream'
+      },
+      {
+        test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'file'
+      },
+      {
+        test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'url?limit=10000&mimetype=image/svg+xml'
+      }
+    ]
   },
   plugins: [
-      // Simply copies the files over
-      new CopyWebpackPlugin([
-          {from: _appSource} // to: output.path
-      ]),
-      // Avoid publishing files when compilation fails
-      new webpack.NoErrorsPlugin()
+
+    // Simply copies the files over
+    new CopyWebpackPlugin([
+      {from: _appSource} // to: output.path
+    ]),
+
+    // Avoid publishing files when compilation fails
+    new webpack.NoErrorsPlugin()
   ],
   stats: {
+
     // Nice colored output
     colors: true
+
   },
+
   // Create Sourcemaps for the bundle
-  devtool: 'source-map',
+  devtool: 'source-map'
+
 };

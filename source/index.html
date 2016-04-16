@@ -1,14 +1,108 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html lang="en">
+  <head>
     <meta charset="utf-8">
-    <title>webpack Babel demo</title>
-</head>
-<body>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="icon" href="../../favicon.ico">
+    <title>ES6 Boilerplate</title>
+  </head>
 
-<h1 id="application-title">Loading....</h1>
-<h3 id="application-subtitle">....</h3>
+  <body>
 
-<script src="bundle.js"></script>
-</body>
+      <!-- Always shows a header, even in smaller screens. -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <!-- Title -->
+          <span class="mdl-layout-title">ES6 - Boilerplate</span>
+          <!-- Add spacer, to align navigation to the right -->
+          <div class="mdl-layout-spacer"></div>
+          <!-- Navigation. We hide it in small screens. -->
+          <nav class="mdl-navigation mdl-layout--large-screen-only">
+            <!-- Flat button with ripple -->
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent"
+              data-link="#questionario">
+              Questionario <i class="material-icons">trending_up</i>
+            </button>
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent"
+              data-link="https://github.com/jimilucio/">
+              GitHub <i class="material-icons">code</i>
+            </button>
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent"
+              data-link="https://twitter.com/jimilucio/">
+              Twitter <i class="material-icons">message</i>
+            </button>
+          </nav>
+        </div>
+      </header>
+      <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">ES6 - Bootcamp</span>
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="" target="_blank"><i class="material-icons">trending_up</i> Questionario</a>
+            <a class="mdl-navigation__link" href="https://github.com/jimilucio/" target="_blank"><i class="material-icons">code</i> GitHub</a>
+            <a class="mdl-navigation__link" href="https://twitter.com/jimilucio" target="_blank"><i class="material-icons">message</i> Twitter</a>
+        </nav>
+      </div>
+      <main class="mdl-layout__content">
+
+        <!-- Let's start code here! -->
+        <div class="mdl-grid">
+          <div class="mdl-cell mdl-cell--4-col">
+
+              <div class="demo-card-square mdl-card mdl-shadow--2dp">
+              <div class="mdl-card__title mdl-card--expand">
+                <h2 class="mdl-card__title-text">ES6</h2>
+              </div>
+              <div class="mdl-card__supporting-text">
+                Compile ES6 with webpack and babel
+              </div>
+              <div class="mdl-card__actions mdl-card--border">
+                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                  Follow me on twitter @jimilucio
+                </a>
+              </div>
+            </div>
+
+          </div>
+          <div class="mdl-cell mdl-cell--4-col">
+
+            <div class="demo-card-square mdl-card mdl-shadow--2dp">
+              <div class="mdl-card__title mdl-card--expand">
+                <h2 class="mdl-card__title-text">SASS</h2>
+              </div>
+              <div class="mdl-card__supporting-text">
+                Compile your stylesheet with SASS!
+              </div>
+              <div class="mdl-card__actions mdl-card--border">
+                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                  Follow me on twitter @jimilucio
+                </a>
+              </div>
+            </div>
+
+          </div>
+          <div class="mdl-cell mdl-cell--4-col">
+            <div class="demo-card-square mdl-card mdl-shadow--2dp">
+              <div class="mdl-card__title mdl-card--expand">
+                <h2 class="mdl-card__title-text">Material Design</h2>
+              </div>
+              <div class="mdl-card__supporting-text">
+                It's support Material Design Lite
+              </div>
+              <div class="mdl-card__actions mdl-card--border">
+                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                  Follow me on twitter @jimilucio
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </main>
+      </div>
+      <script src="bundle.js"></script>
+  </body>
 </html>
