@@ -6,10 +6,12 @@ import TextAnalyzer from './classes/TextAnalyzer';
 import {default as Translater, ITALIAN, ENGLISH}  from './classes/Translater';
 import DomElementNavigation from './classes/DomElementNavigation';
 
-const subTitleObject = document.getElementById('application-subtitle');
+//set the dom element costants
+//textarea
 const textarea = document.getElementById('application-text');
 const textareaTranslated = document.getElementById('application-text-translated');
 
+//information on the right
 const textLength = document.getElementById('text-length');
 const textLengthNoSpaces = document.getElementById('text-length-nospaces');
 const singularWordCount = document.getElementById('singular-words');
@@ -18,12 +20,14 @@ const averageWordLength = document.getElementById('average-word-length');
 const sentencesCount = document.getElementById('sentences-count');
 const mostUsedWords = document.getElementById('most-used-words');
 
-const noTranslate = document.querySelector('input[name="options"][value="3"]');
-
+//new istance of navigation button
 const navigationButton = new DomElementNavigation('.mdl-button');
 
-const analyzer = new TextAnalyzer();
+//traslation info
 const translater = new Translater('trnsl.1.1.20160411T154306Z.c67c417ede790dc2.6616780d6aa5762f9c7ccd94bacde5e0cae37e54');
+
+//translation form button
+const noTranslate = document.querySelector('input[name="options"][value="3"]');
 
 function mapRadioToLanguage(radioValue) {
     switch (radioValue) {
@@ -36,6 +40,10 @@ function mapRadioToLanguage(radioValue) {
     }
 }
 
+//init TextAnalyzer
+const analyzer = new TextAnalyzer();
+
+//this function provide to update the information of the content on the right
 function updateStatistics(analyzer) {
     textLength.innerText = analyzer.textLength(); // Prima
     textLengthNoSpaces.innerText = analyzer.textLengthNoSpaces(); // Prima
@@ -53,23 +61,12 @@ noTranslate.addEventListener('click', event => {
     textareaTranslated.value = '';
 });
 
+// RX.jS on keydown send the new event to the subscribers
 const userInput = Rx.Observable.fromEvent(textarea, 'keydown')
   .debounce(50)
   .map(event => event.target.value);
 
-const translateChange = userInput
-  .filter(value => document.querySelector('input[name="options"]:checked').value != 3);
-
-translateChange.subscribe(
-  value => {
-      const {from, to} = mapRadioToLanguage(document.querySelector('input[name="options"]:checked').value);
-      textareaTranslated.disabled = false;
-      translater.translate(value, from, to)
-        .then(translated => textareaTranslated.value = translated);
-  },
-  err => console.error(err)
-);
-
+// on event update statistics
 userInput.subscribe(
   value => {
       analyzer.setText(value);
@@ -77,3 +74,4 @@ userInput.subscribe(
   },
   err => console.error(err)
 );
+
