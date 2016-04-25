@@ -1,3 +1,28 @@
 .mdl-textfield{
   width: 100%;
 }
+
+.statistics-card-event.mdl-card {
+  width: 100%;
+  height: 80px;
+  min-height: 80px;
+  background: unquote("rgb(#{$palette-blue-grey-500})");
+}
+.statistics-card-event > .mdl-card__actions {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+.statistics-card-event > .mdl-card__subtitle-text {
+  padding: 5px;
+}
+
+.statistics-card-event > .mdl-card__title,
+.statistics-card-event > .mdl-card__subtitle-text {
+  align-items: center;
+}
+
+
+.statistics-card-event > .mdl-card__title,
+.statistics-card-event > .mdl-card__actions,
+.statistics-card-event > .mdl-card__subtitle-text {
+  color: #fff;
+}

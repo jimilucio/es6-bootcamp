@@ -71,6 +71,7 @@
               </div>
             </div>
             <div class="mdl-grid">
+
               <div class="mdl-cell mdl-cell--8-col mdl-cell--10-col-tablet" id="workspace">
                 <div class="mdl-textfield mdl-js-textfield">
                   <textarea id="application-text" class="mdl-textfield__input" type="text" rows= "10"></textarea>
@@ -81,46 +82,90 @@
                   <!-- <label class="mdl-textfield__label" for="application-text-translated">Translated text</label> -->
                 </div>
               </div>
-              <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet" id="info">
-                <ul class="demo-list-item mdl-list">
-                  <li class="mdl-list__item">
-                    <span class="mdl-list__item-primary-content">
-                      Text Length: <span id="text-length"></span>
-                    </span>
-                  </li>
-                  <li class="mdl-list__item">
-                    <span class="mdl-list__item-primary-content">
-                      Text Length (no spaces): <span id="text-length-nospaces"></span>
-                    </span>
-                  </li>
-                  <li class="mdl-list__item">
-                    <span class="mdl-list__item-primary-content">
-                      Singular words: <span id="singular-words"></span>
-                    </span>
-                  </li>
-                  <li class="mdl-list__item">
-                    <span class="mdl-list__item-primary-content">
-                      Singular characters: <span id="singular-chars"></span>
-                    </span>
-                  </li>
-                  <li class="mdl-list__item">
-                    <span class="mdl-list__item-primary-content">
-                      Average word length: <span id="average-word-length"></span>
-                    </span>
-                  </li>
-                  <li class="mdl-list__item">
-                    <span class="mdl-list__item-primary-content">
-                      Sentences: <span id="sentences-count"></span>
-                    </span>
-                  </li>
-                  <li class="mdl-list__item">
-                    <span class="mdl-list__item-primary-content">
-                      Most used words: <span id="most-used-words"></span>
-                    </span>
-                  </li>
-                </ul>
-              </div>
-            </div>
+              <div class="mdl-cell mdl-cell--4-col" id="info">
+
+                <div class="mdl-grid">
+
+                  <div class="mdl-cell mdl-cell--6-col">
+                    <div class="statistics-card-event mdl-card mdl-shadow--2dp">
+                      <div class="mdl-card__title">
+                        <h5  id="text-length"></h5>
+                      </div>
+                      <div class="mdl-card__subtitle-text">Text lenght</div>
+                    </div>
+                  </div>
+
+                  <div class="mdl-cell mdl-cell--6-col">
+                      <div class="statistics-card-event mdl-card mdl-shadow--2dp">
+                        <div class="mdl-card__title">
+                          <h5 id="text-length-nospaces"></h5>
+                        </div>
+                        <div class="mdl-card__subtitle-text">Text  (no spaces)</div>
+                    </div>
+                  </div>
+
+                  </div> <!-- grid statistics row 1-->
+
+                  <div class="mdl-grid">
+
+                  <div class="mdl-cell mdl-cell--6-col">
+                    <div class="statistics-card-event mdl-card mdl-shadow--2dp">
+                      <div class="mdl-card__title">
+                        <h5 id="singular-words"></h5>
+                      </div>
+                      <div class="mdl-card__subtitle-text">Singular words</div>
+                    </div>
+                  </div>
+
+                  <div class="mdl-cell mdl-cell--6-col">
+                      <div class="statistics-card-event mdl-card mdl-shadow--2dp">
+                        <div class="mdl-card__title">
+                          <h5  id="singular-chars"></h5>
+                        </div>
+                        <div class="mdl-card__subtitle-text">Singular chars</div>
+                    </div>
+                  </div>
+
+                  </div> <!-- grid statistics row 2-->
+
+                <div class="mdl-grid">
+
+                  <div class="mdl-cell mdl-cell--6-col">
+                    <div class="statistics-card-event mdl-card mdl-shadow--2dp">
+                      <div class="mdl-card__title">
+                        <h5 id="average-word-length"></h5>
+                      </div>
+                      <div class="mdl-card__subtitle-text">Word length av</div>
+                    </div>
+                  </div>
+
+                  <div class="mdl-cell mdl-cell--6-col">
+                      <div class="statistics-card-event mdl-card mdl-shadow--2dp">
+                        <div class="mdl-card__title">
+                          <h5 id="sentences-count"></h5>
+                        </div>
+                        <div class="mdl-card__subtitle-text">Sentences</div>
+                    </div>
+                  </div>
+
+                  </div> <!-- grid statistics row 3 -->
+                <div class="mdl-grid">
+
+                  <div class="mdl-cell mdl-cell--12-col">
+                    <div class="statistics-card-event mdl-card mdl-shadow--2dp">
+                      <div class="mdl-card__title">
+                        <h5 id="most-used-words"></h5>
+                      </div>
+                      <div class="mdl-card__subtitle-text">Most used words</div>
+                    </div>
+                  </div>
+
+                  </div> <!-- grid statistics row 3 -->
+
+              </div> <!-- col cel-4 -->
+
+
+            </div> <!-- grid container -->
         </div>
       </main>
       <footer class="mdl-mini-footer">
