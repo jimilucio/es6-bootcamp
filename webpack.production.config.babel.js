@@ -4,7 +4,7 @@ import webpack from 'webpack';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
 
 var _appSource = path.resolve(__dirname, 'source');
-var _appBuild = path.resolve(__dirname, 'build');
+var _appBuild = path.resolve(__dirname, 'public');
 
 module.exports = {
     entry: path.resolve(_appSource, 'main.js'),

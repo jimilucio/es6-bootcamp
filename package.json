@@ -9,11 +9,15 @@
     "rx": "^4.1.0"
   },
   "devDependencies": {
+    "babel-eslint": "^6.1.0",
     "babel-loader": "^6.1.0",
     "babel-polyfill": "^6.3.14",
     "babel-preset-es2015": "^6.1.18",
     "copy-webpack-plugin": "^0.2.0",
     "css-loader": "^0.23.1",
+    "eslint": "^2.13.1",
+    "eslint-config-google": "^0.6.0",
+    "eslint-loader": "^1.4.0",
     "exports-loader": "^0.6.3",
     "expose-loader": "^0.7.1",
     "extract-text-webpack-plugin": "^1.0.1",
@@ -37,7 +41,7 @@
     "webpack-dev-server": "^1.12.1"
   },
   "scripts": {
-    "build": "webpack",
+    "build": "webpack -p --config ./webpack.production.config.js --optimize-minimize --optimize-occurrence-order",
     "watch": "webpack --watch",
     "start": "webpack && webpack-dev-server --hot --inline --progress --colors --module-bind",
     "test": "karma start 'karma.config.js'"

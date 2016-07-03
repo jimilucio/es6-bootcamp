@@ -7,8 +7,8 @@ class DomElementNavigation extends DomElement{
    * @return {void}
    */
   constructor(el) {
-      super(el);
-      this.setEvent();
+    super(el);
+    this.setEvent();
   }
 
   /**
@@ -18,26 +18,26 @@ class DomElementNavigation extends DomElement{
    * @return {[type]}       [description]
    */
   doNavigationEvent(event) {
-      console.log('doNavigationEvent event called');
-      let linkUrl = event.currentTarget.getAttribute('data-link');
-      console.log('doNavigationEvent: ', linkUrl);
-      //change hash
-      if (linkUrl.startsWith('#')) {
-          document.location.hash = linkUrl;
-      } else {
-          window.open(linkUrl);
-      }
+    console.log('doNavigationEvent event called');
+    let linkUrl = event.currentTarget.getAttribute('data-link');
+    console.log('doNavigationEvent: ', linkUrl);
+    //change hash
+    if (linkUrl.startsWith('#')) {
+      document.location.hash = linkUrl;
+    } else {
+      window.open(linkUrl);
+    }
   }
 
- /**
-   * [setEvent description]
-   */
+  /**
+    * [setEvent description]
+    */
   setEvent() {
-      let element = this.getElement();
-      if (element) {
-          let buttonClickEvent = Rx.Observable.fromEvent(element, 'click');
-          buttonClickEvent.subscribe(this.doNavigationEvent);
-      }
+    let element = this.getElement();
+    if (element) {
+      let buttonClickEvent = Rx.Observable.fromEvent(element, 'click');
+      buttonClickEvent.subscribe(this.doNavigationEvent);
+    }
   }
 
 }
