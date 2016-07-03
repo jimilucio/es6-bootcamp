@@ -41,7 +41,7 @@
     "webpack-dev-server": "^1.12.1"
   },
   "scripts": {
-    "build": "webpack -p --config ./webpack.production.config.js --optimize-minimize --optimize-occurrence-order",
+    "build": "webpack -p --module-bind --colors --optimize-minimize --optimize-occurrence-order",
     "watch": "webpack --watch",
     "start": "webpack && webpack-dev-server --hot --inline --progress --colors --module-bind",
     "test": "karma start 'karma.config.js'"
