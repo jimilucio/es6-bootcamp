@@ -1,0 +1,91 @@
+$palette-teal:
+"224,242,241"
+"178,223,219"
+"128,203,196"
+"77,182,172"
+"38,166,154"
+"0,150,136"
+"0,137,123"
+"0,121,107"
+"0,105,92"
+"0,77,64"
+"167,255,235"
+"100,255,218"
+"29,233,182"
+"0,191,165";
+
+$palette-teal-50: nth($palette-teal, 1);
+$palette-teal-100: nth($palette-teal, 2);
+$palette-teal-200: nth($palette-teal, 3);
+$palette-teal-300: nth($palette-teal, 4);
+$palette-teal-400: nth($palette-teal, 5);
+$palette-teal-500: nth($palette-teal, 6);
+$palette-teal-600: nth($palette-teal, 7);
+$palette-teal-700: nth($palette-teal, 8);
+$palette-teal-800: nth($palette-teal, 9);
+$palette-teal-900: nth($palette-teal, 10);
+$palette-teal-A100: nth($palette-teal, 11);
+$palette-teal-A200: nth($palette-teal, 12);
+$palette-teal-A400: nth($palette-teal, 13);
+$palette-teal-A700: nth($palette-teal, 14);
+
+$palette-amber:
+"255,248,225"
+"255,236,179"
+"255,224,130"
+"255,213,79"
+"255,202,40"
+"255,193,7"
+"255,179,0"
+"255,160,0"
+"255,143,0"
+"255,111,0"
+"255,229,127"
+"255,215,64"
+"255,196,0"
+"255,171,0";
+
+$palette-amber-50: nth($palette-amber, 1);
+$palette-amber-100: nth($palette-amber, 2);
+$palette-amber-200: nth($palette-amber, 3);
+$palette-amber-300: nth($palette-amber, 4);
+$palette-amber-400: nth($palette-amber, 5);
+$palette-amber-500: nth($palette-amber, 6);
+$palette-amber-600: nth($palette-amber, 7);
+$palette-amber-700: nth($palette-amber, 8);
+$palette-amber-800: nth($palette-amber, 9);
+$palette-amber-900: nth($palette-amber, 10);
+$palette-amber-A100: nth($palette-amber, 11);
+$palette-amber-A200: nth($palette-amber, 12);
+$palette-amber-A400: nth($palette-amber, 13);
+$palette-amber-A700: nth($palette-amber, 14);
+
+$palette-blue-grey:
+"236,239,241"
+"207,216,220"
+"176,190,197"
+"144,164,174"
+"120,144,156"
+"96,125,139"
+"84,110,122"
+"69,90,100"
+"55,71,79"
+"38,50,56";
+
+$palette-blue-grey-50: nth($palette-blue-grey, 1);
+$palette-blue-grey-100: nth($palette-blue-grey, 2);
+$palette-blue-grey-200: nth($palette-blue-grey, 3);
+$palette-blue-grey-300: nth($palette-blue-grey, 4);
+$palette-blue-grey-400: nth($palette-blue-grey, 5);
+$palette-blue-grey-500: nth($palette-blue-grey, 6);
+$palette-blue-grey-600: nth($palette-blue-grey, 7);
+$palette-blue-grey-700: nth($palette-blue-grey, 8);
+$palette-blue-grey-800: nth($palette-blue-grey, 9);
+$palette-blue-grey-900: nth($palette-blue-grey, 10);
+
+$color-black: "0,0,0";
+$color-white: "255,255,255";
+
+$color-primary: $palette-teal-500 !default;
+$color-primary-dark: $palette-teal-700 !default;
+$color-accent: $palette-amber-A200 !default;

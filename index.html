@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="icon" href="../../favicon.ico">
+    <title>ES6 Bootcamp</title>
+  </head>
+
+  <body>
+
+    <!-- Always shows a header, even in smaller screens. -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <!-- Title -->
+          <span class="mdl-layout-title">ES6 - Bootcamp</span>
+          <!-- Add spacer, to align navigation to the right -->
+          <div class="mdl-layout-spacer"></div>
+          <!-- Navigation. We hide it in small screens. -->
+          <nav class="mdl-navigation mdl-layout--large-screen-only">
+            <!-- Flat button with ripple -->
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent"
+              data-link="#questionario">
+              Questionario <i class="material-icons">trending_up</i>
+            </button>
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent"
+              data-link="https://github.com/jimilucio/es6-bootcamp">
+              GitHub <i class="material-icons">code</i>
+            </button>
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent"
+              data-link="https://twitter.com/jimilucio/">
+              Twitter <i class="material-icons">message</i>
+            </button>
+          </nav>
+        </div>
+      </header>
+      <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">ES6 - Bootcamp</span>
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="" target="_blank"><i class="material-icons">trending_up</i> Questionario</a>
+            <a class="mdl-navigation__link" href="https://github.com/jimilucio/" target="_blank"><i class="material-icons">code</i> GitHub</a>
+            <a class="mdl-navigation__link" href="https://twitter.com/jimilucio" target="_blank"><i class="material-icons">message</i> Twitter</a>
+        </nav>
+      </div>
+      <main class="mdl-layout__content">
+        <div class="page-content">
+
+
+            <!-- Your content goes here -->
+            <div class="mdl-grid">
+              <div class="mdl-cell--2-col">
+                <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
+                  <input type="radio" id="option-1" class="mdl-radio__button" name="options" value="1" checked>
+                  <span class="mdl-radio__label">Ita-Eng</span>
+                </label>
+              </div>
+              <div class="mdl-cell--2-col">
+                <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
+                  <input type="radio" id="option-2" class="mdl-radio__button" name="options" value="2">
+                  <span class="mdl-radio__label">Eng-Ita</span>
+                </label>
+              </div>
+              <div class="mdl-cell--2-col">
+                <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-3">
+                  <input type="radio" id="option-3" class="mdl-radio__button" name="options" value="3">
+                  <span class="mdl-radio__label">No-translate</span>
+                </label>
+              </div>
+            </div>
+            <div class="mdl-grid">
+
+              <div class="mdl-cell mdl-cell--8-col mdl-cell--10-col-tablet" id="workspace">
+                <div class="mdl-textfield mdl-js-textfield">
+                  <textarea id="application-text" class="mdl-textfield__input" type="text" rows= "10"></textarea>
+                  <label class="mdl-textfield__label" for="application-text">Type some text to analyze!</label>
+                </div>
+                <div class="mdl-textfield mdl-js-textfield">
+                  <textarea id="application-text-translated" class="mdl-textfield__input" type="text" rows= "10" readonly="true" placeholder="Translated Text"></textarea>
+                  <!-- <label class="mdl-textfield__label" for="application-text-translated">Translated text</label> -->
+                </div>
+              </div>
+              <div class="mdl-cell mdl-cell--4-col" id="info">
+
+                <div class="mdl-grid">
+
+                  <div class="mdl-cell mdl-cell--6-col">
+                    <div class="statistics-card-event mdl-card mdl-shadow--2dp">
+                      <div class="mdl-card__title">
+                        <h5  id="text-length"></h5>
+                      </div>
+                      <div class="mdl-card__subtitle-text">Text lenght</div>
+                    </div>
+                  </div>
+
+                  <div class="mdl-cell mdl-cell--6-col">
+                      <div class="statistics-card-event mdl-card mdl-shadow--2dp">
+                        <div class="mdl-card__title">
+                          <h5 id="text-length-nospaces"></h5>
+                        </div>
+                        <div class="mdl-card__subtitle-text">Text  (no spaces)</div>
+                    </div>
+                  </div>
+
+                  </div> <!-- grid statistics row 1-->
+
+                  <div class="mdl-grid">
+
+                  <div class="mdl-cell mdl-cell--6-col">
+                    <div class="statistics-card-event mdl-card mdl-shadow--2dp">
+                      <div class="mdl-card__title">
+                        <h5 id="singular-words"></h5>
+                      </div>
+                      <div class="mdl-card__subtitle-text">Singular words</div>
+                    </div>
+                  </div>
+
+                  <div class="mdl-cell mdl-cell--6-col">
+                      <div class="statistics-card-event mdl-card mdl-shadow--2dp">
+                        <div class="mdl-card__title">
+                          <h5  id="singular-chars"></h5>
+                        </div>
+                        <div class="mdl-card__subtitle-text">Singular chars</div>
+                    </div>
+                  </div>
+
+                  </div> <!-- grid statistics row 2-->
+
+                <div class="mdl-grid">
+
+                  <div class="mdl-cell mdl-cell--6-col">
+                    <div class="statistics-card-event mdl-card mdl-shadow--2dp">
+                      <div class="mdl-card__title">
+                        <h5 id="average-word-length"></h5>
+                      </div>
+                      <div class="mdl-card__subtitle-text">Word length av</div>
+                    </div>
+                  </div>
+
+                  <div class="mdl-cell mdl-cell--6-col">
+                      <div class="statistics-card-event mdl-card mdl-shadow--2dp">
+                        <div class="mdl-card__title">
+                          <h5 id="sentences-count"></h5>
+                        </div>
+                        <div class="mdl-card__subtitle-text">Sentences</div>
+                    </div>
+                  </div>
+
+                  </div> <!-- grid statistics row 3 -->
+                <div class="mdl-grid">
+
+                  <div class="mdl-cell mdl-cell--12-col">
+                    <div class="statistics-card-event mdl-card mdl-shadow--2dp">
+                      <div class="mdl-card__title">
+                        <h5 id="most-used-words"></h5>
+                      </div>
+                      <div class="mdl-card__subtitle-text">Most used words</div>
+                    </div>
+                  </div>
+
+                  </div> <!-- grid statistics row 3 -->
+
+              </div> <!-- col cel-4 -->
+
+
+            </div> <!-- grid container -->
+        </div>
+      </main>
+      <footer class="mdl-mini-footer">
+        <div class="mdl-mini-footer__left-section">
+          <div class="mdl-logo">ES6 - TextAnalyzer</div>
+          <ul class="mdl-mini-footer__link-list">
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+          </ul>
+        </div>
+        <div class="mdl-mini-footer__right-section">
+          <div class="mdl-logo">Powered by</div>
+          <ul class="mdl-mini-footer__link-list">
+            <li><a href="#">@jimilucio</a></li>
+            <li><a href="#">@illbexyz</a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+
+
+    <script src="bundle.js"></script>
+  </body>
+</html>
