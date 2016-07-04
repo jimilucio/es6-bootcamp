@@ -6,7 +6,7 @@ JS Libraries:
  - Fetch (https://github.com/github/fetch)
 
 ## DEMO PAGE
-https://github.com/jimilucio/es6-bootcamp
+http://jimilucio.github.io/es6-bootcamp/
 
 Suggestions or contributions are appreciated.
 
